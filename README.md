@@ -1,6 +1,7 @@
 # laravel-api
 
 Pet project for learning Laravel API + Swagger + OpenAPI + Docket + PostgreSQL  
+Front: Vue.js
 NoSQL will be added in the future versions.
 
 run Laravel backend:
