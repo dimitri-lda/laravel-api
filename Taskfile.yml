@@ -4,6 +4,9 @@ tasks:
   up:
     cmds:
       - ./vendor/bin/sail up
+  upd:
+    cmds:
+      - ./vendor/bin/sail up -d
   stop:
     cmds:
       - ./vendor/bin/sail stop
