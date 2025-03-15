@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test2', function () {
-    return response()->json(['message' => 'API работает!']);
+Route::get('/show-api', function () {
+    return view('show-api');
 });
