@@ -13,3 +13,5 @@ api example: http://127.0.0.1:8000/api/example?id=5
 run Vue.js frontend:  
 ```npm run dev```
 Frontend url (Vue.js): http://127.0.0.1:8000/show-api
+
+![public/images/img.png](public/images/img.png)
