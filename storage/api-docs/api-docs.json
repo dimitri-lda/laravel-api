@@ -1,0 +1,29 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "example API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/example": {
+            "get": {
+                "tags": [
+                    "Test section"
+                ],
+                "summary": "example API endpoint in Laravel (swagger autoupdates)",
+                "operationId": "2aebbdb3743d46361755e027d9f20a36",
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Test section",
+            "description": "Test section"
+        }
+    ]
+}

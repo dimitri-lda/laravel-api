@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  up:
+    cmds:
+      - ./vendor/bin/sail up
+  upd:
+    cmds:
+      - ./vendor/bin/sail up -d
+  stop:
+    cmds:
+      - ./vendor/bin/sail stop
+  down:
+    cmds:
+      - ./vendor/bin/sail down
