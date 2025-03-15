@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
 use Illuminate\Http\Request;
 use OpenApi\Attributes as OA;
 
@@ -18,11 +19,18 @@ class ApiExampleController extends Controller
     )]
     public function index(Request $request)
     {
-        $message = 'Hello, API! from Laravel with OpenAPI';
-        if ($request->has('id')) {
-            $message .= ', request id: ' . $request->input('id');
+        $message = 'Hello! It is response by Laravel API.';
+        $id = $request->input('text');
+
+        if ($id !== null) {
+            $message .= ' You have entered: ' . $request->input('text');
+        } else {
+            $message .= ' You haven\'t entered anything.';
         }
 
-        return response()->json(['message' => $message]);
+        return response()->json([
+            'message' => $message,
+            'datetime' => new DateTime()->format('Y-m-d H:i:s'),
+        ]);
     }
 }
