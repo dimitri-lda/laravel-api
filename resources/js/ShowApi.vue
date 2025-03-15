@@ -1,9 +1,14 @@
 <template>
-    <div>
-        <h2>API Response:</h2>
-        <p v-if="loading">Loading...</p>
-        <p v-else-if="error" class="error">{{ error }}</p>
-        <pre v-else>{{ data }}</pre>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">API Response for /api/example:</h2>
+            <p v-if="loading" class="text-gray-500">Loading...</p>
+            <p v-else-if="error" class="text-red-500">{{ error }}</p>
+            <pre
+                v-else
+                class="bg-gray-200 p-4 rounded-md text-left text-sm text-gray-800 overflow-auto"
+            >{{ data }}</pre>
+        </div>
     </div>
 </template>
 
@@ -31,9 +36,3 @@ const fetchData = async () => {
 
 onMounted(fetchData);
 </script>
-
-<style scoped>
-.error {
-    color: red;
-}
-</style>
